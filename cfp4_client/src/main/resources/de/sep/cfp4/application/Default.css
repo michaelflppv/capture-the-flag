@@ -1,0 +1,270 @@
+
+/* Define standard values */
+.root {
+  -fx-background-color: white;
+}
+
+.root, .button, .label, .text-field {
+  -fx-font-size: 16;
+  -fx-font-family: "Inter Medium";
+}
+
+
+/* Define custom look for scroll pane */
+/* https://stackoverflow.com/questions/17540137/javafx-scrollpane-border-and-background/17540428#17540428 */
+
+.scroll-pane {
+  -fx-background-color: transparent;
+  -fx-background-insets: 0;
+  -fx-padding: 0;
+}
+
+.scroll-pane > .viewport {
+  -fx-background-color: white;
+}
+
+.scroll-pane:focused {
+  -fx-background-insets: 0;
+}
+
+.scroll-pane .corner {
+  -fx-background-insets: 0;
+}
+
+.scroll-bar {
+  -fx-background-color: transparent;
+  -fx-padding: 0;
+}
+
+.scroll-bar .track {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-background-radius: 0;
+}
+
+.scroll-bar .thumb{
+  -fx-background-color: grey;
+  -fx-background-insets: 6, 6, 6, 6;
+  -fx-background-radius: 2;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+  -fx-background-color: transparent;
+}
+
+
+/* ---------------------------- */
+
+.bold-text{
+  -fx-font-size: 20;
+  -fx-font-family: "Inter SemiBold";
+}
+
+/* Define custom buttons */
+.transparent-button{
+  -fx-background-color: "transparent";
+}
+
+.transparent-button:hover{
+  -fx-background-color: #f0f0f0;
+}
+
+.transparent-button:pressed{
+  -fx-background-color: #e0e0e0;
+}
+
+/* --------------------------------- */
+.grey-button{
+  -fx-background-color: #f0f0f0;
+}
+
+.grey-button:hover{
+  -fx-background-color: #e0e0e0;
+}
+
+.grey-button:pressed{
+  -fx-background-color: #d0d0d0;
+}
+
+/* --------------------------------- */
+.black-button{
+  -fx-text-fill: "white";
+  -fx-background-color: "black";
+}
+
+.black-button:hover{
+  -fx-background-color: #333333;
+}
+
+.black-button:pressed{
+  -fx-background-color: #666666;
+}
+
+/* Game Board Scene */
+.gameboard-text{
+  -fx-font-size: 30;
+  -fx-font-family: "Joti One";
+}
+
+.gameboard-button{
+  -fx-font-size: 20;
+  -fx-font-family: "Joti One";
+}
+
+.gameboard-button:hover{
+  -fx-background-color: #333333;
+}
+
+.gameboard-button:pressed{
+  -fx-background-color: #666666;
+}
+
+.icon-button{
+  -fx-padding: 0;
+}
+
+
+/* Join Game Scene */
+.table-view{
+  -fx-border-color: transparent;
+  -fx-background-color: transparent;
+  -fx-border-radius: 8;
+}
+
+.table-view .column-header .label{
+  -fx-alignment: center-left;
+  -fx-font-family: "Inter SemiBold";
+  -fx-text-fill: #828282;
+}
+
+.table-view .column-header, .table-view .column-header:empty {
+  -fx-background-color: white;
+}
+
+.table-view .table-cell{
+  -fx-background-color: white;
+  -fx-border-color: white;
+  -fx-border-width: 1 0 0 0;
+  -fx-padding: 16 0 8 2;
+}
+
+.table-view .table-cell:filled{
+  -fx-alignment: center-left;
+  -fx-border-color: #E0E0E0;
+}
+
+.table-view .trash-button{
+  -fx-padding: 2;
+  -fx-background-radius: 8;
+  -fx-background-color: #f0f0f0;
+}
+
+.table-view .grey-button{
+  -fx-padding: 2 18;
+  -fx-background-radius: 8;
+}
+
+.table-view .black-button{
+  -fx-padding: 2 8;
+  -fx-background-radius: 8;
+}
+
+.server-list{
+  -fx-background-color: transparent;
+  -fx-border-color: #E0E0E0;
+  -fx-border-width: 1;
+  -fx-border-radius: 8;
+  -fx-padding: 16;
+}
+
+.server-list .label{
+  -fx-font-family: "Inter SemiBold";
+}
+
+.combo-box{
+  -fx-background-color: white;
+  -fx-border-color: #E0E0E0;
+  -fx-border-radius: 8;
+}
+
+.list-view{
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-border-radius: 8;
+}
+
+.list-view .list-cell{
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-padding: 0
+}
+
+.info-button{
+  -fx-background-color: black;
+  -fx-padding: 0;
+  -fx-shape: "M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,21h-2v-7h2V21z M15,11.5 c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5s1.5,0.672,1.5,1.5S15.828,11.5,15,11.5z";
+}
+
+.dialog-pane .button-bar{
+  -fx-alignment: LEFT;
+}
+
+.combo-box > .list-cell {
+  -fx-padding: 0 0 0 5;
+  -fx-border-insets: 0 0 0 0;
+  -fx-background-color: white;
+  -fx-text-fill: #B2B2B2;
+}
+
+.combo-box .list-view{
+  -fx-background-color: white;
+  -fx-border-color: #E0E0E0;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-padding: 1 2 1 2;
+  -fx-text-fill: black;
+}
+
+.combo-box .list-view .list-cell{
+  -fx-padding: 0 0 0 5;
+  -fx-background-insets: 1;
+  -fx-background-color: white;
+  -fx-background-radius: 8;
+}
+
+.combo-box .list-view .list-cell:selected{
+  -fx-background-color: #E0E0E0;
+  -fx-text-fill: black;
+}
+
+.combo-box .list-view .list-cell:filled:hover{
+  -fx-background-color: #E0E0E0;
+  -fx-text-fill: black;
+}
+
+.medium-text{
+  -fx-font-family: "Inter SemiBold";
+}
+
+.piece-creation{
+  -fx-background-color: white;
+  -fx-border-color: #E0E0E0;
+  -fx-border-radius: 8;
+  -fx-border-width: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

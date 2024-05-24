@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane stylesheets="@Default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.cfp4.application.controller.gamePlay.CreateGameController">
+   <content>
+      <AnchorPane prefHeight="907.0" prefWidth="1241.0">
+        <children>
+            <Button layoutX="22.0" layoutY="801.0" mnemonicParsing="false" onAction="#createNewGame" prefHeight="40.0" prefWidth="549.0" styleClass="black-button" text="Create Game">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="593.0" layoutY="110.0" text="Map Preview" />
+            <fx:include fx:id="serverList" layoutX="22.0" layoutY="65.0" prefHeight="440.0" prefWidth="550.0" source="ServerList.fxml" />
+            <fx:include fx:id="mapTemplateList" layoutX="22.0" layoutY="455.0" prefHeight="290.0" prefWidth="550.0" source="MapTemplateList.fxml" />
+            <fx:include fx:id="opponentList" layoutX="593.0" layoutY="550.0" prefHeight="200.0" prefWidth="350.0" source="OpponentList.fxml" />
+            <TextField fx:id="teamID" layoutX="22.0" layoutY="760.0" prefHeight="35.0" prefWidth="549.0" promptText="Team Name" />
+            <Button layoutX="593.0" layoutY="501.0" mnemonicParsing="false" onAction="#renderPreview" prefHeight="40.0" prefWidth="350.0" styleClass="black-button" text="Render Preview" />
+            <AnchorPane fx:id="mapPreview" layoutX="593.0" layoutY="144.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: #E0E0E0;" />
+        </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

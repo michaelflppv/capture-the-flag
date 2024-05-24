@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="290.0" prefWidth="550.0" stylesheets="@Default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.cfp4.application.controller.gameSetup.MapListController">
+  <children>
+    <VBox maxHeight="290.0" prefHeight="290.0" prefWidth="549.0" styleClass="server-list">
+      <children>
+      <Label text="Map Templates" />
+        <TableView fx:id="mapTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="515.0" styleClass="test-pane">
+          <columns>
+            <TableColumn fx:id="mapNameColumn" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+            <TableColumn fx:id="openEditorColumn" minWidth="200.0" prefWidth="200.0" />
+            <TableColumn fx:id="selectionColumn" minWidth="100.0" prefWidth="128.0" />
+            <TableColumn fx:id="deleteColumn" minWidth="50.0" prefWidth="62.0" />
+          </columns>
+          <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+          </columnResizePolicy>
+        </TableView>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

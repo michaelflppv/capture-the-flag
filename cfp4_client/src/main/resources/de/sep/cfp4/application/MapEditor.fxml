@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane prefHeight="966.0" prefWidth="1348.0" stylesheets="@Default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.cfp4.application.controller.gameSetup.MapEditorController">
+   <content>
+      <AnchorPane prefHeight="965.0" prefWidth="1345.0">
+         <children>
+            <fx:include fx:id="selectedPiecesList" layoutX="25.0" layoutY="24.0" source="SelectedPiecesList.fxml" />
+            <fx:include fx:id="storedPiecesList" layoutX="553.0" layoutY="24.0" source="StoredPiecesList.fxml" />
+            <fx:include fx:id="pieceCreation" layoutX="301.0" layoutY="24.0" source="PieceCreation.fxml" />
+            <Label layoutX="191.0" layoutY="381.0" styleClass="medium-text" text="Board Size" />
+            <Label layoutX="297.0" layoutY="381.0" styleClass="medium-text" text="Teams" />
+            <Label layoutX="403.0" layoutY="380.0" styleClass="medium-text" text="Flags" />
+            <Label layoutX="615.0" layoutY="381.0" styleClass="medium-text" text="Piece Placement" />
+            <ComboBox fx:id="mapSizeComboBox" layoutX="191.0" layoutY="410.0" prefHeight="25.0" prefWidth="90.0" />
+            <ComboBox fx:id="numberTeamsComboBox" layoutX="297.0" layoutY="411.0" prefHeight="25.0" prefWidth="90.0" />
+            <ComboBox fx:id="piecePlacementComboBox" layoutX="615.0" layoutY="411.0" prefHeight="27.0" prefWidth="150.0" />
+            <Button layoutX="24.0" layoutY="522.0" mnemonicParsing="false" onAction="#createMapTemplate" prefHeight="40.0" prefWidth="812.0" styleClass="black-button" text="Create Map Template" />
+            <ComboBox fx:id="numberFlagsComboBox" layoutX="403.0" layoutY="411.0" prefHeight="25.0" prefWidth="90.0" />
+            <Label layoutX="509.0" layoutY="381.0" styleClass="medium-text" text="Obstacles" />
+            <ComboBox fx:id="obstaclesComboBox" layoutX="509.0" layoutY="411.0" prefHeight="25.0" prefWidth="90.0" />
+            <Label layoutX="25.0" layoutY="380.0" styleClass="medium-text" text="Map Name" />
+            <TextField fx:id="mapNameTextField" layoutX="25.0" layoutY="411.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Enter Name" />
+            <Label layoutX="24.0" layoutY="444.0" styleClass="medium-text" text="Total Game Time" />
+            <ComboBox fx:id="totalGameTimeComboBox" layoutX="25.0" layoutY="475.0" prefHeight="25.0" prefWidth="150.0" />
+            <Label layoutX="191.0" layoutY="444.0" styleClass="medium-text" text="Time per Move" />
+            <ComboBox fx:id="timePerMoveComboBox" layoutX="191.0" layoutY="475.0" prefHeight="25.0" prefWidth="150.0" />
+            <fx:include fx:id="serverList" layoutX="24.0" layoutY="580.0" source="ServerList.fxml" />
+            <AnchorPane fx:id="mapPreview" layoutX="852.0" layoutY="24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" style="-fx-background-color: #E0E0E0;" />
+            <Button layoutX="852.0" layoutY="522.0" mnemonicParsing="false" onAction="#renderPreview" prefHeight="40.0" prefWidth="480.0" styleClass="black-button" text="Render Preview" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="340.0" prefWidth="283.0" styleClass="server-list" stylesheets="@Default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.cfp4.application.controller.gameSetup.StoredPiecesListController">
+   <children>
+      <Label text="Stored Pieces" />
+      <TableView fx:id="pieceTable" prefHeight="331.0" prefWidth="283.0" styleClass="test-pane">
+         <columns>
+            <TableColumn fx:id="nameColumn" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Name" />
+            <TableColumn fx:id="viewColumn" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="View" />
+            <TableColumn fx:id="addButtonColumn" maxWidth="70.0" minWidth="60.0" prefWidth="60.0" />
+            <TableColumn fx:id="deleteColumn" maxWidth="80.0" minWidth="37.33331298828125" prefWidth="59.33331298828125" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</VBox>

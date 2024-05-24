@@ -1,0 +1,28 @@
+{
+  "gridSize": [10, 10],
+  "teams": 2,
+  "flags": 1,
+  "blocks": 0,
+  "pieces": [
+    {
+      "type": "Queen",
+      "attackPower": 10,
+      "count": 1,
+      "movement": {
+        "directions": {
+          "left": 10,
+          "right": 10,
+          "up": 10,
+          "down": 10,
+          "upLeft": 10,
+          "upRight": 10,
+          "downLeft": 10,
+          "downRight": 10
+        }
+      }
+    }
+  ],
+  "placement": "symmetrical",
+  "totalTimeLimitInSeconds": -1,
+  "moveTimeLimitInSeconds": -1
+}

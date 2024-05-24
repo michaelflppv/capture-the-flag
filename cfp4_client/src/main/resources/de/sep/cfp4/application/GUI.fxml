@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="gui" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Default.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sep.cfp4.application.controller.GUIController">
+   <left>
+      <HBox prefHeight="954.0" prefWidth="256.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="954.0" prefWidth="256.0">
+               <top>
+                  <VBox prefHeight="247.0" prefWidth="256.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" styleClass="bold-text" text="Capture the Flag">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0">
+                                 <image>
+                                    <Image url="@images/Flag.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setHomeScene" prefHeight="40.0" styleClass="transparent-button" text="Home">
+                           <VBox.margin>
+                              <Insets bottom="2.5" left="8.0" right="8.0" top="2.5" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0">
+                                 <image>
+                                    <Image url="@images/Home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" onAction="#setCreateGameScene" styleClass="transparent-button" text="Create a new Game">
+                           <VBox.margin>
+                              <Insets bottom="2.5" left="8.0" right="8.0" top="2.5" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0">
+                                 <image>
+                                    <Image url="@images/Lupe.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setJoinGameScene" prefHeight="40.0" styleClass="transparent-button" text="Join a Game">
+                           <VBox.margin>
+                              <Insets bottom="2.5" left="8.0" right="8.0" top="2.5" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0">
+                                 <image>
+                                    <Image url="@images/Online.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setMapEditorScene" prefHeight="40.0" styleClass="transparent-button" text="Map Editor">
+                           <VBox.margin>
+                              <Insets bottom="2.5" left="8.0" right="8.0" top="2.5" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0">
+                                 <image>
+                                    <Image url="@images/Map.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </top>
+               <bottom>
+                  <VBox prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setSettingsScene" prefHeight="0.0" prefWidth="202.0" styleClass="transparent-button" text="Settings">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="2.5" left="8.0" right="8.0" top="2.5" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0">
+                                 <image>
+                                    <Image url="@images/Settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#confirmAndExit" prefHeight="40.0" styleClass="transparent-button" text="Exit">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="8.0" right="8.0" top="2.5" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0">
+                                 <image>
+                                    <Image url="@images/Exit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </bottom>
+               <center>
+                  <VBox BorderPane.alignment="TOP_LEFT">
+                     <BorderPane.margin>
+                        <Insets bottom="2.5" left="16.0" right="8.0" top="2.5" />
+                     </BorderPane.margin>
+                     <children>
+                        <Label id="gui-text" styleClass="bold-text" text="Current Sessions">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="gameSessionList" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <Separator halignment="RIGHT" orientation="VERTICAL" prefHeight="315.0" prefWidth="2.0" />
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <ScrollPane fx:id="guiScrollPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
