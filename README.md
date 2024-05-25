@@ -30,41 +30,41 @@ Navigate to the cfp4_client module and go into the de.sep.cfp4.gui package. Ther
 ## Package Descriptions
 We will now give a brief overview of the different packages inside of the project and highlight some of the most important classes and their functionality.
 
-- **Package: ctf.game.controller:**
+- **Package: [ctf.game.controller](cfp-service/src/main/java/de/unimannheim/swt/pse/ctf/controller):**
  This package includes controllers for handling HTTP requests related to game sessions.
 GameSession: Represents a session of the game, managing the state and progress.
 GameSessionController: Handles HTTP requests related to game sessions.
 
-- **Package: ctf.game.engine:**
+- **Package: [ctf.game.engine](cfp-service/src/main/java/de/unimannheim/swt/pse/ctf/game/engine):**
  This package contains the core game logic, including the game engine and helper methods.
 GameEngine: Implementation of all aspects of the game logic.
 RespawnHelperMethods: Helper methods for handling player respawn logic.
 ValidMoveHelperMethods: Helper methods for validating player moves.
 
-- **Package: ctf.game.PiecePlacement:**
+- **Package: [ctf.game.PiecePlacement](cfp-service/src/main/java/de/unimannheim/swt/pse/ctf/game/PiecePlacement):**
  This package includes constants and classes related to piece placement and game configuration.
 PiecePlacement: Manages the placement of game pieces on the board.
 
-- **Package: cfp4.gui:**
+- **Package: [cfp4.gui](cfp4_client/src/main/java/de/sep/cfp4):**
  This package comprises all components related to the client-side GUI, including controllers, models, views, and interfaces.
 Launcher: Starts the GUI.
 Database: Interface for database operations within the client application.
 BoardModel: Represents the model for the game board in the client application.
 MapEditorModel: Model for the map editor within the client application.
 
-- **Package: cfp4.AI:**
+- **Package: [cfp4.AI](cfp4_client/src/main/java/de/sep/cfp4/technicalServices/ai):**
  This package contains all the components related to the artificial intelligence (AI) functionalities used in the game. This includes the implementation of the Monte Carlo Tree Search (MCTS) algorithm and other related models and utilities that enable AI-driven decision-making within the game.
 MCTSClient: Interacts with the game. It contains methods for determining the value of a game state, checking if the game is terminated, and making the optimal move in the game. It also contains methods for interacting with the game's board model and the game's teams. NormalBot: Implements a more advanced AI that evaluates and ranks possible moves based on strategic considerations, making informed decisions to maximize the bot's advantage.
 EasyBot: Implements a simple AI that makes random valid moves, prioritizing immediate opportunities to capture flags or opponent pieces. 
 
-- **Package: cfp4.gameClient:**
+- **Package: [cfp4.gameClient](cfp4_client/src/main/java/de/sep/cfp4/technicalServices/network):**
  This package provides the client-side functionality for interacting with the game server, enabling the frontend to communicate with the backend for various game operations.
 GameClient: Implements the client for the frontend to communicate with the backend, handling operations such as creating and joining game sessions, making moves, retrieving game state, and managing game sessions through HTTP requests.
 
 ## Extension Points
 The project is designed with extensibility in mind. Here are some key extension points:
 
-- **Game Logic**: The core game logic is implemented in the de.unimannheim.swt.pse.ctf.game package. You can extend or modify the game rules by creating new classes or extending existing ones in this package.
+- **Game Logic**: The core game logic is implemented in the [de.unimannheim.swt.pse.ctf.game](cfp-service/src/main/java/de/unimannheim/swt/pse/ctf/game) package. You can extend or modify the game rules by creating new classes or extending existing ones in this package.
 
 - **Controllers**: To add new functionalities accessible via HTTP, you can add or extend controllers in the de.unimannheim.swt.pse.ctf.controller package.
 Data Transfer Objects (DTOs): The de.unimannheim.swt.pse.ctf.controller.data package contains DTOs for communication between the client and server. You can add new DTOs to support additional data exchanges.
