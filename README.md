@@ -66,12 +66,13 @@ The project is designed with extensibility in mind. Here are some key extension 
 
 - **Game Logic**: The core game logic is implemented in the [de.unimannheim.swt.pse.ctf.game](cfp-service/src/main/java/de/unimannheim/swt/pse/ctf/game) package. You can extend or modify the game rules by creating new classes or extending existing ones in this package.
 
-- **Controllers**: To add new functionalities accessible via HTTP, you can add or extend controllers in the de.unimannheim.swt.pse.ctf.controller package.
-Data Transfer Objects (DTOs): The de.unimannheim.swt.pse.ctf.controller.data package contains DTOs for communication between the client and server. You can add new DTOs to support additional data exchanges.
+- **Controllers**: To add new functionalities accessible via HTTP, you can add or extend controllers in the [de.unimannheim.swt.pse.ctf.controller](cfp-service/src/main/java/de/unimannheim/swt/pse/ctf/controller) package.
 
-- **Client GUI**: The client-side GUI can be extended by adding new controllers, views, or models in the de.sep.cfp4.gui package and its sub-packages.
+ Data Transfer Objects (DTOs): The [de.unimannheim.swt.pse.ctf.controller.data](cfp-service/src/main/java/de/unimannheim/swt/pse/ctf/controller/data) package contains DTOs for communication between the client and server. You can add new DTOs to support additional data exchanges.
 
-- **Monte Carlo Tree Search (MCTS)**: The de.sep.cfp4.mcts package contains the MCTS algorithm implementation. You can extend this package to improve or customize the MCTS algorithm used in the game.
+- **Client GUI**: The client-side GUI can be extended by adding new controllers, views, or models in the [de.sep.cfp4.gui](cfp4_client/src/main/java/de/sep/cfp4) package and its sub-packages.
+
+- **Monte Carlo Tree Search (MCTS)**: The [de.sep.cfp4.mcts](cfp4_client/src/main/java/de/sep/cfp4/technicalServices/ai/mcts) package contains the MCTS algorithm implementation. You can extend this package to improve or customize the MCTS algorithm used in the game.
 
 # Progress Report
 **Network**
@@ -98,11 +99,24 @@ The task of validating a move is handled by an instance of an extra class within
 
 All game functions have now been tested and are working properly. The tests for the server/GameEngine are fully implemented. The test classes for the two support classes are complete, relying on JUnit tests with randomly generated data. The GameEngine test class, despite its complexity, has also been successfully developed. Additionally, we have implemented tests for the GameClient, validated Map Templates, and rigorously tested AI Bots. The CtfApplication and Game Session Controller have undergone thorough testing. We used both random data and edge cases to ensure comprehensive coverage. The extensive suite of tests confirms the stability and reliability of the entire system.
 
-# Documentation
-## Domain Model
-![image](https://github.com/michaelflppv/capture-the-flag/assets/113472068/09db2b4b-7631-4cef-b355-0a1e47b9ba5f)
-## Architecture Diagram
-![image](https://github.com/michaelflppv/capture-the-flag/assets/113472068/e0fc206d-44c9-4666-b25e-3d55c95230fb)
+# Description of (third-party) libraries
+The project was developed on Java 17 using IntelliJ IDEA as an IDE. IntelliJ supports the development with Apache Maven, which we used as a build automation tool in accordance with the project requirements. We also intend to use Maven for building the .jar files for our submissions.
+
+Maven runs with the following dependencies or third-party libraries respectively, as listed in the project object model (pom files). The scope of all dependencies is either not specified (= compile) or test.
+
+## Client Module
+- [JafaFX](https://openjfx.io/): Two dependencies with artifactId specified as JavaFX-controls and JavaFX-FXML to implement the graphical user interface.
+- [JUnit 5](https://junit.org/junit5/): Used for running tests on module and system level.
+- **CFP-Service** : This structures the sequence in which the modules are built and helps to import given classes such as requests and moves from CFP-Service to avoid code duplication.
+- [Gson](https://github.com/google/gson): Used for converting requests and responses to JSON files for client-server communication.#
+- [Maven Sunfire](https://maven.apache.org/surefire/maven-surefire-plugin/): JUnit 5 test automation with maven
+- [Maven Shade Plugin](https://maven.apache.org/plugins/maven-shade-plugin/): Creation of an executable jar-file
+- [Deep Java Library)](https://djl.ai/engines/pytorch/pytorch-engine/) **for PyTorch**: This module contains the Deep Java Library (DJL) EngineProvider for PyTorch.
+
+## Service Module
+- [Spring Boot](https://spring.io/projects/spring-boot): Two versions with the artifactId specified for web and test.
+- [Spring Doc](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html)
+
 
 
 ## Contributors
