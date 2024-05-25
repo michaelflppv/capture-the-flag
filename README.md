@@ -7,7 +7,7 @@ This project is part of the CS306 Software Engineering Practical course of the U
 
 The project goal is to create a digital version of the popular game 'Capture the Flag' that offers an interactive and engaging experience for players. The game is easy to understand and play. The software implements all the rules and mechanics of 'Capture the Flag' as described in the requirements document. Additionally, it provides flexibility by allowing players to create custom maps in terms of size, teams, pieces, and number of flags in each base. It allows for the selection of AI-powered players of varying difficulties to fill team slots. To enable multiple players to participate in a single game session from various locations, a client-server architecture using the RESTful API is employed. The project is deemed successful if the final software meets all requirements, including cross-compatibility with third-party servers and clients that implement the same RESTful API.
 
-Both the client and server are implemented in Java (SDK 17), the UI is realized using JavaFX. Furthermore, a **requirements specification** can always be found in [REQUIREMENTS_SPECIFICATION.md](REQUIREMENTS_SPECIFICATION.md).
+Both the client and server are implemented in Java (SDK 17), the UI is realized using JavaFX. Furthermore, a **requirements specification** can always be found in [REQUIREMENTS_SPECIFICATION.md](cfp-service/REQUIREMENTS_SPECIFICATION.md).
 
 
 # User Manual
